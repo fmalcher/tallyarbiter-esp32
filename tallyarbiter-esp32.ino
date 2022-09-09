@@ -359,17 +359,7 @@ void onSocketReassign(String payload) {
   wsEmit("listener_reassign_object", charReassignObj);
   wsEmit("devices");
   
-  digitalWrite(led_program, HIGH);
-  digitalWrite(led_preview, HIGH);
-  delay(200);
-  digitalWrite(led_program, LOW);
-  digitalWrite(led_preview, LOW);
-  delay(200);
-  digitalWrite(led_program, HIGH);
-  digitalWrite(led_preview, HIGH);
-  delay(200);
-  digitalWrite(led_program, LOW);
-  digitalWrite(led_preview, LOW);
+  flashAlternate(3);
 
   logger("newDeviceId: " + newDeviceId);
   DeviceId = newDeviceId;
